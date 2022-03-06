@@ -51,7 +51,7 @@ class SignUP extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 11),
-            AppButton(label: "Sign up", onPress: onSignPress),
+            AppButton(label: "Sign Up", onPress: onSignPress),
           ],
         ),
       ),

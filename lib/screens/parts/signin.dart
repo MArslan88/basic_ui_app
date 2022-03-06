@@ -13,13 +13,13 @@ class SignIn extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Let's sign in!",
+            const Text("Let’s sign you in",
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 35,
                     fontWeight: FontWeight.bold)),
             const SizedBox(height: 14),
-            const Text("Welcome \nJoin the community!",
+            const Text("Welcome back \nyou’ve been missed !",
                 style: TextStyle(color: Colors.white, fontSize: 30)),
 
             const SizedBox(
@@ -36,18 +36,18 @@ class SignIn extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   Text(
-                    "Already have an account ? ",
+                    "Don’t have an account ? ",
                     style: TextStyle(color: Color(0xff8F8F9E), fontSize: 15),
                   ),
                   Text(
-                    "Sign In",
+                    "Register",
                     style: TextStyle(color: Colors.white, fontSize: 15),
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 11),
-            AppButton(label: "Sign up", onPress: onSignPress),
+            AppButton(label: "Sign In", onPress: onSignPress),
           ],
         ),
       ),
