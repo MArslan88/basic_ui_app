@@ -1,54 +1,64 @@
+import 'dart:js';
+
 import 'package:basic_ui_app/screens/parts/app_button.dart';
 import 'package:basic_ui_app/screens/parts/app_textfield.dart';
+import 'package:basic_ui_app/screens/parts/card_view.dart';
+import 'package:basic_ui_app/screens/parts/search_textfield.dart';
+import 'package:basic_ui_app/screens/signin.dart';
 import 'package:flutter/material.dart';
 
-class SignIn extends StatelessWidget {
+class JobListing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: const Color(0xFF191720),
       body: Padding(
         padding:
-            const EdgeInsets.only(left: 27, top: 110, bottom: 59, right: 27),
+            const EdgeInsets.only(left: 27, top: 79, bottom: 59, right: 27),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Let’s sign you in",
+            const Text("Welcome",
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 35,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold)),
             const SizedBox(height: 14),
-            const Text("Welcome back \nyou’ve been missed !",
-                style: TextStyle(color: Colors.white, fontSize: 30)),
+            Row(
+              children: const [
+                Text("Muhammad Arslan",
+                    style: TextStyle(color: Colors.white, fontSize: 25)),
+                Spacer(),
+                Icon(
+                  Icons.logout,
+                  color: Colors.white,
+                )
+              ],
+            ),
 
             const SizedBox(
-                height: 47), // to create space between text and TextField
-            const AppTextField(placeholder: "Enter your email address"),
-            const AppTextField(placeholder: "Enter your password"),
-
-            const Spacer(), // to create space between password textField and button
-            GestureDetector(
-              onTap: () {
-                // Screen navigation code
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
-                    "Don’t have an account ? ",
-                    style: TextStyle(color: Color(0xff8F8F9E), fontSize: 15),
-                  ),
-                  Text(
-                    "Register",
-                    style: TextStyle(color: Colors.white, fontSize: 15),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 11),
-            AppButton(label: "Sign In", onPress: onSignPress),
+                height: 19), // to create space between text and TextField
+            const SearchTextField(placeholder: "Search keywords.."),
+            const SizedBox(height: 26),
+            CardView(),
+            CardView(),
+            CardView(),
+            CardView(),
+            CardView(),
+            CardView(),
           ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (_) => SignIn()));
+        },
+        child: const Icon(
+          Icons.add,
+          color: Colors.black,
         ),
       ),
     );

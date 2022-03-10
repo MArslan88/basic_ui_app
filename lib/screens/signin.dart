@@ -1,5 +1,6 @@
 import 'package:basic_ui_app/screens/parts/app_button.dart';
 import 'package:basic_ui_app/screens/parts/app_textfield.dart';
+import 'package:basic_ui_app/screens/signup.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatelessWidget {
@@ -31,6 +32,8 @@ class SignIn extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 // Screen navigation code
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => SignUP()));
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -1,6 +1,6 @@
 import 'package:basic_ui_app/screens/parts/app_button.dart';
 import 'package:basic_ui_app/screens/parts/app_textfield.dart';
-import 'package:basic_ui_app/screens/parts/signin.dart';
+import 'package:basic_ui_app/screens/signin.dart';
 import 'package:flutter/material.dart';
 
 class SignUP extends StatelessWidget {
