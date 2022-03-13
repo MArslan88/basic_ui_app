@@ -1,3 +1,4 @@
+import 'package:basic_ui_app/screens/job_listing.dart';
 import 'package:basic_ui_app/screens/parts/app_button.dart';
 import 'package:basic_ui_app/screens/parts/app_textfield.dart';
 import 'package:basic_ui_app/screens/signup.dart';
@@ -7,6 +8,7 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: const Color(0xFF191720),
       body: Padding(
         padding:
@@ -50,12 +52,15 @@ class SignIn extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 11),
-            AppButton(label: "Sign In", onPress: onSignPress),
+            AppButton(
+                label: "Sign In",
+                onPress: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (_) => JobListing()));
+                }),
           ],
         ),
       ),
     );
   }
-
-  void onSignPress() {}
 }
