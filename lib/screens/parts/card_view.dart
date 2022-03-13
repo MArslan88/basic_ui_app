@@ -1,3 +1,4 @@
+import 'package:basic_ui_app/screens/ad_editing.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -27,9 +28,15 @@ class CardView extends StatelessWidget {
             ],
           ),
           SizedBox(width: 140),
-          const Icon(
-            Icons.edit,
-            color: Colors.white,
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => AdEditing()));
+            },
+            child: const Icon(
+              Icons.edit,
+              color: Colors.white,
+            ),
           ),
           SizedBox(width: 25),
           const Icon(

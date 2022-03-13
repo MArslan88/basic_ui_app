@@ -1,3 +1,4 @@
+import 'package:basic_ui_app/screens/ad_editing.dart';
 import 'package:basic_ui_app/screens/ad_posting.dart';
 import 'package:basic_ui_app/screens/job_listing.dart';
 import 'package:basic_ui_app/screens/signin.dart';
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AdPosting(),
+      home: AdEditing(),
     );
   }
 }
